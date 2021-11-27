@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footnote renders correctly 1`] = `
+<p
+  className="text-xs px-8 mb-4 text-muted"
+>
+  data.primary.paragraph.text
+</p>
+`;

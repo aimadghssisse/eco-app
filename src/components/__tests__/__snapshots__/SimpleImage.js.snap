@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleImage renders correctly 1`] = `
+<div
+  className="text-center"
+>
+  <img
+    alt="data.primary.image.alt"
+    className="mt-6"
+    src="data.primary.image.url"
+  />
+</div>
+`;
+
+exports[`SimpleImage renders correctly 1`] = `
+<div
+  className="text-center"
+>
+  <img
+    alt="data.primary.image.alt"
+    className="mt-6"
+    src="data.primary.image.url"
+  />
+</div>
+`;

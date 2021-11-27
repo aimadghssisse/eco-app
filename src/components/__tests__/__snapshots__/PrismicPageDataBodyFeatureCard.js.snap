@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureCard renders correctly 1`] = `
+<div
+  class="flex-none sm:flex flex-wrap mb-12"
+>
+  <div
+    class="flex-auto sm:flex-1 sm:mr-4 mb-6 sm:mb-0 rounded-md white-panel"
+  >
+    <div
+      class="p-5"
+    >
+      <h1
+        class="text-2xl mb-3"
+      >
+        card.title
+      </h1>
+      <p
+        className="mb-4"
+      >
+        card.description
+      </p>
+      <a
+        href="card.link_target.url"
+      >
+        card.link_text
+      </a>
+    </div>
+    <img
+      alt="card.image.alt"
+      className="h-auto w-full border border-transparent rounded-md"
+      src="card.image.url"
+    />
+  </div>
+</div>
+`;
