@@ -80,5 +80,5 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
 
-  "proxy": "http://localhost:1337",
+  "proxy": "http://localhost:1337"
 }
