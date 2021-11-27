@@ -78,5 +78,7 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+
+  "proxy": "http://localhost:1337",
 }
