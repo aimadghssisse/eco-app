@@ -39,7 +39,7 @@ exports.onPostBootstrap = function () {
     }
 };
 
-exports.onPreInit = function ({ pathPrefix, store }) {
+exports.onPostBuild = function ({ pathPrefix, store }) {
     if(process.env.NODE_ENV != "development") {
         return new Promise((resolve, reject) => {
           if (fs.existsSync("server/index.js")) {
