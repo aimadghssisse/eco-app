@@ -12,20 +12,22 @@ let instance = axios.create({
 
 //
 //
-instance.get('/getProducts', {
-	 query: `query products {
-			  site {
-			    products  {
-			      edges {
-			        cursor
-			        node {
-			          entityId
-			          name
-			        }
-			      }
-			    }
-			  }
-			}`
+instance.post('/getProducts', {
+    data: {
+        query: `query products {
+            site {
+                products  {
+                    edges {
+                        cursor
+                        node {
+                            entityId
+                            name
+                        }
+                    }
+                }
+            }
+        }`
+    }
 }).then(resp => {
 	console.log(resp.data);
 }).catch(error => {

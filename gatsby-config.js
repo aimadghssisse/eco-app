@@ -84,7 +84,7 @@ module.exports = {
         // [optional] - name of key on `window` where serialized state will be stored, default:
         windowKey: '__PRELOADED_STATE__'
       }
-    },
-    `gatsby-plugin-nodejs`
+    }
+    // `gatsby-plugin-nodejs`,
   ]
 }

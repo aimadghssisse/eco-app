@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "axios": "^0.24.0",
+    "chalk": "^5.0.0",
     "cors": "^2.8.5",
     "gatsby": "^4.0.1",
     "gatsby-plugin-express": "^1.1.6",
@@ -66,7 +67,7 @@
     "build-css": "tailwindcss build src/assets/styles/tailwind.css -o public/styles.css",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "node server/index.js",
+    "start": "nodemon server/index.js",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"

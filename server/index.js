@@ -12,8 +12,8 @@ app.use(cors({
 }))
 app.use(morgan("tiny"))
 
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 // app.use(routes);
 let instance = axios.create({
   baseURL: 'https://api.bigcommerce.com/stores/uy6zkv5dq4/v3',
@@ -46,22 +46,19 @@ let instance = axios.create({
 
 
 
-gatsby.prepare({ app }, () => {
-    app.get('/getProducts', function (req, res) {
-        console.log(req.body);
-      instance.get('/catalog/products').then(response => {
-          console.log('work');
-          res.json(response.data);
-      }).catch(error => {
-          console.log("error");
+app.post('/getProducts', function (req, res) {
+    console.log(req.body);
+    instance.get('/catalog/products').then(response => {
+        console.log('work');
+        res.json(response.data);
+    }).catch(error => {
+        console.log("error");
 
-      })
-    });
+    })
+});
 
-    app.get('/ping', function (req, res) {
-      res.json('PONG');
-    });
-
+app.get('/ping', function (req, res) {
+    res.json('PONG');
 });
 
 const port = process.env.PORT || 1337;
