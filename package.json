@@ -66,8 +66,7 @@
     "build-css": "tailwindcss build src/assets/styles/tailwind.css -o public/styles.css",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "postinstall": "node server/index.js",
-    
+    "start": "node server/index.js",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
