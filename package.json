@@ -67,6 +67,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "postinstall": "node server/index.js",
+    
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
