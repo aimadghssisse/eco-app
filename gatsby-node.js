@@ -62,5 +62,3 @@ exports.onPostBuild = function ({ pathPrefix, store }) {
         });
     }
 };
-
-process.on("beforeExit", () => watchProc.kill());
