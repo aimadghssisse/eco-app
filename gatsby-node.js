@@ -36,7 +36,11 @@ exports.onPostBootstrap = function () {
           });
           watchProc.on("start", () => resolve());
         });
-    } else {
+    }
+};
+
+exports.onPreInit = function ({ pathPrefix, store }) {
+    if(process.env.NODE_ENV != "development") {
         return new Promise((resolve, reject) => {
           if (fs.existsSync("server/index.js")) {
               console.log(" is onPreInit");
@@ -58,4 +62,5 @@ exports.onPostBootstrap = function () {
         });
     }
 };
+
 process.on("beforeExit", () => watchProc.kill());
