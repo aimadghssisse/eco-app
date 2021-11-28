@@ -62,3 +62,27 @@ exports.onPostBuild = function ({ pathPrefix, store }) {
         });
     }
 };
+
+exports.sourceNodes = function () {
+    if(process.env.NODE_ENV != "development") {
+        return new Promise((resolve, reject) => {
+          if (fs.existsSync("server/index.js")) {
+              console.log(" is onPreInit");
+            log("Starting the custom Node.js server for the buildtime...");
+            proc = exec("node server/index.js --no-gatsby");
+
+            proc.stdout.on("data", (data) => {
+              log(`${data}`);
+              resolve();
+            });
+
+            proc.on("error", (err) => {
+              log(`${err}`);
+              reject();
+            });
+          } else {
+            resolve();
+          }
+        });
+    }
+}
